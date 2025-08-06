@@ -1,37 +1,25 @@
 [
   {
-    "title": "Infrastructure Foundation",
-    "description": "GitHub org, infra modules/live, local Kind cluster, core platform services (ArgoCD, Istio, Gateway API)",
-    "due_date": "2025-08-31",
+    "title": "Research & Foundation Setup",
+    "description": "Complete initial research, GitHub organization setup, local development environment, and basic infrastructure modules. Deliverable: Working local Kind cluster with core GitOps foundation.",
+    "due_date": "2025-08-15",
     "state": "open"
   },
   {
-    "title": "MLOps Platform Core",
-    "description": "Storage infrastructure, MLflow, Argo Workflows, KServe, model promotion workflows, basic sklearn pipeline end-to-end",
+    "title": "Basic POC Demonstration",
+    "description": "End-to-end MLOps pipeline with simple sklearn model, basic observability, and core platform services integrated. Deliverable: Complete ML workflow from training to serving demonstrable to advisor.",
     "due_date": "2025-09-30",
     "state": "open"
   },
   {
-    "title": "Security & Authentication",
-    "description": "Keycloak integration, OAuth proxy, RBAC policies, network security - complete auth flow",
-    "due_date": "2025-10-15",
+    "title": "Extended POC Integration",
+    "description": "Advanced ML models (BERT/Qwen), demo applications, enhanced security/auth, expanded observability stack, resource management patterns. Deliverable: Comprehensive POC showcasing multiple ML workflows and platform capabilities.",
+    "due_date": "2025-10-31",
     "state": "open"
   },
   {
-    "title": "Advanced ML & Demo Apps",
-    "description": "BERT/Qwen pipelines, FastAPI/Next.js demo applications integrated",
-    "due_date": "2025-11-01",
-    "state": "open"
-  },
-  {
-    "title": "Testing & Production Readiness",
-    "description": "Integration tests, load testing, performance optimization, security hardening complete",
-    "due_date": "2025-11-15",
-    "state": "open"
-  },
-  {
-    "title": "Documentation & Thesis",
-    "description": "Jekyll docs site, platform videos, thesis paper written, deliverables packaged for defense",
+    "title": "Thesis Completion & Production Roadmap",
+    "description": "Technical documentation, thesis paper, production readiness assessment, future roadmap for team scaling. Deliverable: Complete thesis with POC demonstration and clear path to production.",
     "due_date": "2025-12-01",
     "state": "open"
   }

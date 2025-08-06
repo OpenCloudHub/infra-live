@@ -91,6 +91,11 @@
       "mlops",
       "platform"
     ],
+    "template": {
+      "owner": "just-the-docs",
+      "repository": "just-the-docs-template",
+      "include_all_branches": false
+    },
     "team_permissions": {
       "admin": "admin",
       "platform": "maintain",

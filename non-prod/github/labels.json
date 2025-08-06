@@ -1,0 +1,107 @@
+[
+  {
+    "name": "type:epic",
+    "color": "5319e7",
+    "description": "Large work packages spanning weeks/months"
+  },
+  {
+    "name": "type:feature",
+    "color": "84b6eb",
+    "description": "New functionality or significant components"
+  },
+  {
+    "name": "type:task",
+    "color": "0e8a16",
+    "description": "Specific implementation work"
+  },
+  {
+    "name": "type:bug",
+    "color": "d73a4a",
+    "description": "Something broken that needs fixing"
+  },
+  {
+    "name": "type:research",
+    "color": "fbca04",
+    "description": "Investigation or analysis needed"
+  },
+  {
+    "name": "type:documentation",
+    "color": "0075ca",
+    "description": "Create/update docs and guides"
+  },
+  {
+    "name": "team:platform",
+    "color": "1d76db",
+    "description": "Infrastructure, GitOps, core services"
+  },
+  {
+    "name": "team:ai",
+    "color": "5319e7",
+    "description": "ML models, training, experiments"
+  },
+  {
+    "name": "team:app",
+    "color": "0e8a16",
+    "description": "Frontend, backend, demo applications"
+  },
+  {
+    "name": "priority:critical",
+    "color": "b60205",
+    "description": "Blocking progress, system down"
+  },
+  {
+    "name": "priority:high",
+    "color": "d93f0b",
+    "description": "Important for milestone"
+  },
+  {
+    "name": "priority:medium",
+    "color": "fbca04",
+    "description": "Standard priority"
+  },
+  {
+    "name": "priority:low",
+    "color": "0e8a16",
+    "description": "Nice to have, can defer"
+  },
+  {
+    "name": "status:blocked",
+    "color": "e11d21",
+    "description": "Waiting on dependency"
+  },
+  {
+    "name": "status:in-review",
+    "color": "5319e7",
+    "description": "PR submitted, awaiting feedback"
+  },
+  {
+    "name": "status:needs-help",
+    "color": "fef2c0",
+    "description": "Requires clarification"
+  },
+  {
+    "name": "size:xs",
+    "color": "d4c5f9",
+    "description": "< 2 hours effort"
+  },
+  {
+    "name": "size:s",
+    "color": "c2e0c6",
+    "description": "2–8 hours (half to full day)"
+  },
+  {
+    "name": "size:m",
+    "color": "bfdadc",
+    "description": "1–3 days (typical task)"
+  },
+  {
+    "name": "size:l",
+    "color": "f9d0c4",
+    "description": "3–7 days (substantial feature)"
+  },
+  {
+    "name": "size:xl",
+    "color": "e99695",
+    "description": "1+ weeks (consider breaking down)"
+  }
+]

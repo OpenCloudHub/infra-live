@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Infrastructure Foundation",
+    "description": "GitHub org, infra modules/live, local Kind cluster, core platform services (ArgoCD, Istio, Gateway API)",
+    "due_date": "2025-08-31",
+    "state": "open"
+  },
+  {
+    "title": "MLOps Platform Core",
+    "description": "Storage infrastructure, MLflow, Argo Workflows, KServe, model promotion workflows, basic sklearn pipeline end-to-end",
+    "due_date": "2025-09-30",
+    "state": "open"
+  },
+  {
+    "title": "Security & Authentication",
+    "description": "Keycloak integration, OAuth proxy, RBAC policies, network security - complete auth flow",
+    "due_date": "2025-10-15",
+    "state": "open"
+  },
+  {
+    "title": "Advanced ML & Demo Apps",
+    "description": "BERT/Qwen pipelines, FastAPI/Next.js demo applications integrated",
+    "due_date": "2025-11-01",
+    "state": "open"
+  },
+  {
+    "title": "Testing & Production Readiness",
+    "description": "Integration tests, load testing, performance optimization, security hardening complete",
+    "due_date": "2025-11-15",
+    "state": "open"
+  },
+  {
+    "title": "Documentation & Thesis",
+    "description": "Jekyll docs site, platform videos, thesis paper written, deliverables packaged for defense",
+    "due_date": "2025-12-01",
+    "state": "open"
+  }
+]

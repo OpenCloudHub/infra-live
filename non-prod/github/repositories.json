@@ -1,0 +1,117 @@
+{
+  "infra-modules": {
+    "description": "Reusable Terraform modules for OpenCloudHub MLOps platform infrastructure",
+    "visibility": "public",
+    "topics": [
+      "terraform",
+      "infrastructure",
+      "modules",
+      "mlops",
+      "platform"
+    ],
+    "team_permissions": {
+      "admin": "admin",
+      "platform": "maintain"
+    },
+    "environments": {
+      "production": {
+        "wait_timer": 0,
+        "required_reviewers": {
+          "users": [
+            94812726
+          ],
+          "teams": []
+        }
+      }
+    },
+    "gitignore_template": "Terraform",
+    "license_template": "apache-2.0"
+  },
+  "infra-live": {
+    "description": "Live infrastructure configuration using Terragrunt for OpenCloudHub environments",
+    "visibility": "public",
+    "topics": [
+      "terragrunt",
+      "infrastructure",
+      "live",
+      "mlops",
+      "platform"
+    ],
+    "team_permissions": {
+      "admin": "admin",
+      "platform": "maintain"
+    },
+    "environments": {
+      "production": {
+        "wait_timer": 0,
+        "required_reviewers": {
+          "users": [
+            94812726
+          ],
+          "teams": []
+        }
+      }
+    },
+    "gitignore_template": "Terraform",
+    "license_template": "apache-2.0"
+  },
+  ".github": {
+    "description": "Organization-wide GitHub configuration, workflows, and community files",
+    "visibility": "public",
+    "topics": [
+      "github",
+      "organization",
+      "workflows",
+      "community"
+    ],
+    "team_permissions": {
+      "admin": "admin",
+      "platform": "maintain"
+    },
+    "environments": {
+      "production": {
+        "wait_timer": 0,
+        "required_reviewers": {
+          "users": [
+            94812726
+          ],
+          "teams": []
+        }
+      }
+    },
+    "gitignore_template": "Node",
+    "license_template": "apache-2.0"
+  },
+  "docs": {
+    "description": "OpenCloudHub documentation site powered by Jekyll",
+    "visibility": "public",
+    "topics": [
+      "documentation",
+      "jekyll",
+      "mlops",
+      "platform"
+    ],
+    "team_permissions": {
+      "admin": "admin",
+      "platform": "maintain",
+      "ai": "pull",
+      "app": "pull"
+    },
+    "environments": {
+      "production": {
+        "wait_timer": 0,
+        "required_reviewers": {
+          "users": [
+            94812726
+          ],
+          "teams": []
+        }
+      }
+    },
+    "pages": {
+      "build_type": "workflow"
+    },
+    "gitignore_template": "Jekyll",
+    "license_template": "apache-2.0"
+  }
+}

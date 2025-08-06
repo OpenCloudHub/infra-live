@@ -1,0 +1,64 @@
+name: Terragrunt CD
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'non-prod/**'
+      - 'root.hcl'
+      - '.github/workflows/cd.yaml'
+
+env:
+  TG_VERSION: "0.82.3"
+  TOFU_VERSION: "1.10.1" 
+  TG_DIR: "."
+  TF_PLUGIN_CACHE_DIR: ${{ github.workspace }}/.terraform.d/plugin-cache
+
+jobs:
+  terragrunt-cd:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.TG_DIR }}
+    
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      GITHUB_OWNER: ${{ vars.GH_OWNER }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Create Plugin Cache Dir
+        run: mkdir -p $TF_PLUGIN_CACHE_DIR
+      
+      - name: Cache Terraform Plugins
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.TF_PLUGIN_CACHE_DIR }}
+          key: ${{ runner.os }}-terraform-plugin-cache-${{ hashFiles('**/versions.tf', '**/.terraform.lock.hcl') }}
+          restore-keys: |
+            ${{ runner.os }}-terraform-plugin-cache-
+      
+      - name: Terragrunt Plan
+        id: plan
+        uses: gruntwork-io/terragrunt-action@v3
+        with:
+          tg_version: ${{ env.TG_VERSION }}
+          tofu_version: ${{ env.TOFU_VERSION }}
+          tg_dir: ${{ env.TG_DIR }}
+          tg_command: 'plan --all --no-color'
+          github_token: ${{ env.GITHUB_TOKEN }}
+          github_owner: ${{ vars.GH_OWNER }}
+      
+      - name: Terragrunt Apply
+        uses: gruntwork-io/terragrunt-action@v3
+        with:
+          tg_version: ${{ env.TG_VERSION }}
+          tofu_version: ${{ env.TOFU_VERSION }}
+          tg_dir: ${{ env.TG_DIR }}
+          tg_command: 'apply --all --auto-approve'
+          github_token: ${{ env.GITHUB_TOKEN }}
+          github_owner: ${{ vars.GH_OWNER }}
+        env:
+          TF_PLUGIN_CACHE_DIR: ${{ env.TF_PLUGIN_CACHE_DIR }}

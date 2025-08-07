@@ -3,7 +3,7 @@
   "name": "OpenCloudHub",
   "description": "MLOps platform for educational and research purposes - building in public",
   "company": "OpenCloudHub",
-  "blog": "https://opencloudhub.github.io/docs",
+  "blog": "docs.opencloudhub.org",
   "location": "Frankfurt, Germany",
   "has_organization_projects": true,
   "has_repository_projects": false,

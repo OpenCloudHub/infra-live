@@ -1,23 +1,18 @@
 [
   {
-    "name": "type:epic",
-    "color": "5319e7",
-    "description": "Large work packages spanning weeks/months"
-  },
-  {
     "name": "type:feature",
     "color": "84b6eb",
-    "description": "New functionality or significant components"
+    "description": "A request, idea, or new functionality"
   },
   {
     "name": "type:task",
     "color": "0e8a16",
-    "description": "Specific implementation work"
+    "description": "A specific piece of work"
   },
   {
     "name": "type:bug",
     "color": "d73a4a",
-    "description": "Something broken that needs fixing"
+    "description": "An unexpected problem or behavior"
   },
   {
     "name": "type:research",
@@ -32,37 +27,37 @@
   {
     "name": "team:platform",
     "color": "1d76db",
-    "description": "Infrastructure, GitOps, core services"
+    "description": "Platform engineering and infrastructure team – GitOps, Kubernetes, MLOps platform"
   },
   {
     "name": "team:ai",
     "color": "5319e7",
-    "description": "ML models, training, experiments"
+    "description": "AI/ML engineering team – model development, training pipelines, research"
   },
   {
     "name": "team:app",
     "color": "0e8a16",
-    "description": "Frontend, backend, demo applications"
+    "description": "Application development team – frontend, backend, demo applications"
   },
   {
     "name": "priority:critical",
     "color": "b60205",
-    "description": "Blocking progress, system down"
+    "description": "Address immediately!"
   },
   {
     "name": "priority:high",
     "color": "d93f0b",
-    "description": "Important for milestone"
+    "description": "Important and urgent; should be handled soon"
   },
   {
     "name": "priority:medium",
     "color": "fbca04",
-    "description": "Standard priority"
+    "description": "Valuable but not time-sensitive"
   },
   {
     "name": "priority:low",
     "color": "0e8a16",
-    "description": "Nice to have, can defer"
+    "description": "Nice-to-have; lowest urgency"
   },
   {
     "name": "status:blocked",

@@ -1,26 +1,26 @@
 [
-  {
-    "title": "Research & Foundation Setup",
-    "description": "Complete initial research, GitHub organization setup, local development environment, and basic infrastructure modules. Deliverable: Working local Kind cluster with core GitOps foundation.",
-    "due_date": "2025-08-15",
-    "state": "open"
-  },
-  {
-    "title": "Basic POC Demonstration",
-    "description": "End-to-end MLOps pipeline with simple sklearn model, basic observability, and core platform services integrated. Deliverable: Complete ML workflow from training to serving demonstrable to advisor.",
-    "due_date": "2025-09-30",
-    "state": "open"
-  },
-  {
-    "title": "Extended POC Integration",
-    "description": "Advanced ML models (BERT/Qwen), demo applications, enhanced security/auth, expanded observability stack, resource management patterns. Deliverable: Comprehensive POC showcasing multiple ML workflows and platform capabilities.",
-    "due_date": "2025-10-31",
-    "state": "open"
-  },
-  {
-    "title": "Thesis Completion & Production Roadmap",
-    "description": "Technical documentation, thesis paper, production readiness assessment, future roadmap for team scaling. Deliverable: Complete thesis with POC demonstration and clear path to production.",
-    "due_date": "2025-12-01",
-    "state": "open"
-  }
+	{
+		"title": "Research & Foundation Setup",
+		"description": "Complete initial research, GitHub organization setup, local development environment, and basic infrastructure modules. Deliverable: Working local Kind cluster with core GitOps foundation.",
+		"due_date": "2025-08-15",
+		"state": "open"
+	},
+	{
+		"title": "Basic POC Demonstration",
+		"description": "End-to-end MLOps pipeline with simple sklearn model, basic observability, and core platform services integrated. Deliverable: Complete ML workflow from training to serving demonstrable to advisor.",
+		"due_date": "2025-09-30",
+		"state": "open"
+	},
+	{
+		"title": "Extended POC Integration",
+		"description": "Advanced ML models (BERT/Qwen), demo applications, enhanced security/auth, expanded observability stack, resource management patterns. Deliverable: Comprehensive POC showcasing multiple ML workflows and platform capabilities.",
+		"due_date": "2025-10-31",
+		"state": "open"
+	},
+	{
+		"title": "Thesis Completion & Production Roadmap",
+		"description": "Technical documentation, thesis paper, production readiness assessment, future roadmap for team scaling. Deliverable: Complete thesis with POC demonstration and clear path to production.",
+		"due_date": "2025-12-01",
+		"state": "open"
+	}
 ]

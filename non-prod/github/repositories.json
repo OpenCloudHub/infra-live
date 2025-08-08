@@ -1,122 +1,202 @@
 {
-  "infra-modules": {
-    "description": "Reusable Terraform modules for OpenCloudHub MLOps platform infrastructure",
-    "visibility": "public",
-    "topics": [
-      "terraform",
-      "infrastructure",
-      "modules",
-      "mlops",
-      "platform"
-    ],
-    "team_permissions": {
-      "admin": "admin",
-      "platform": "maintain"
-    },
-    "environments": {
-      "production": {
-        "wait_timer": 0,
-        "required_reviewers": {
-          "users": [
-            94812726
-          ],
-          "teams": []
-        }
-      }
-    },
-    "gitignore_template": "Terraform",
-    "license_template": "apache-2.0"
-  },
-  "infra-live": {
-    "description": "Live infrastructure configuration using Terragrunt for OpenCloudHub environments",
-    "visibility": "public",
-    "topics": [
-      "terragrunt",
-      "infrastructure",
-      "live",
-      "mlops",
-      "platform"
-    ],
-    "team_permissions": {
-      "admin": "admin",
-      "platform": "maintain"
-    },
-    "environments": {
-      "production": {
-        "wait_timer": 0,
-        "required_reviewers": {
-          "users": [
-            94812726
-          ],
-          "teams": []
-        }
-      }
-    },
-    "gitignore_template": "Terraform",
-    "license_template": "apache-2.0"
-  },
-  ".github": {
-    "description": "Organization-wide GitHub configuration, workflows, and community files",
-    "visibility": "public",
-    "topics": [
-      "github",
-      "organization",
-      "workflows",
-      "community"
-    ],
-    "team_permissions": {
-      "admin": "admin",
-      "platform": "maintain"
-    },
-    "environments": {
-      "production": {
-        "wait_timer": 0,
-        "required_reviewers": {
-          "users": [
-            94812726
-          ],
-          "teams": []
-        }
-      }
-    },
-    "gitignore_template": "Node",
-    "license_template": "apache-2.0"
-  },
-  "docs": {
-    "description": "OpenCloudHub documentation site powered by Jekyll",
-    "visibility": "public",
-    "topics": [
-      "documentation",
-      "jekyll",
-      "mlops",
-      "platform"
-    ],
-    "template": {
-      "owner": "just-the-docs",
-      "repository": "just-the-docs-template",
-      "include_all_branches": false
-    },
-    "team_permissions": {
-      "admin": "admin",
-      "platform": "maintain",
-      "ai": "pull",
-      "app": "pull"
-    },
-    "environments": {
-      "production": {
-        "wait_timer": 0,
-        "required_reviewers": {
-          "users": [
-            94812726
-          ],
-          "teams": []
-        }
-      }
-    },
-    "pages": {
-      "build_type": "workflow"
-    },
-    "gitignore_template": "Jekyll",
-    "license_template": "apache-2.0"
-  }
+	"infra-modules": {
+		"description": "Reusable Terraform modules for OpenCloudHub MLOps platform infrastructure",
+		"visibility": "public",
+		"topics": ["terraform", "infrastructure", "modules", "mlops", "platform"],
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Terraform",
+		"license_template": "apache-2.0"
+	},
+	"infra-live": {
+		"description": "Live infrastructure configuration using Terragrunt for OpenCloudHub environments",
+		"visibility": "public",
+		"topics": ["terragrunt", "infrastructure", "live", "mlops", "platform"],
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Terraform",
+		"license_template": "apache-2.0"
+	},
+	".github": {
+		"description": "Organization-wide GitHub configuration, workflows, and community files",
+		"visibility": "public",
+		"topics": ["github", "organization", "workflows", "community"],
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Node",
+		"license_template": "apache-2.0"
+	},
+	"docs": {
+		"description": "OpenCloudHub documentation site powered by Jekyll",
+		"visibility": "public",
+		"topics": ["documentation", "jekyll", "mlops", "platform"],
+		"template": {
+			"owner": "just-the-docs",
+			"repository": "just-the-docs-template",
+			"include_all_branches": false
+		},
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain",
+			"ai": "pull",
+			"app": "pull"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"pages": {
+			"build_type": "workflow"
+		},
+		"gitignore_template": "Jekyll",
+		"license_template": "apache-2.0"
+	},
+	"gitops": {
+		"description": "Organization-wide GitHub configuration, workflows, and community files",
+		"visibility": "public",
+		"topics": ["gitops", "kubernetes", "argocd", "helm", "deployments"],
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Terraform",
+		"license_template": "apache-2.0"
+	},
+	"ai-ml-sklearn": {
+		"description": "Traditional machine learning workflows with scikit-learn demonstrating basic MLOps patterns",
+		"visibility": "public",
+		"topics": [
+			"machine-learning",
+			"sklearn",
+			"mlflow",
+			"argo-workflows",
+			"mlops",
+			"kubernetes"
+		],
+		"team_permissions": {
+			"admin": "admin",
+			"ai": "maintain",
+			"platform": "pull"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Python",
+		"license_template": "apache-2.0"
+	},
+	"ai-dl-bert": {
+		"description": "Deep learning NLP workflows with BERT transformers demonstrating advanced MLOps and DVC integration",
+		"visibility": "public",
+		"topics": [
+			"deep-learning",
+			"bert",
+			"transformers",
+			"nlp",
+			"mlflow",
+			"dvc",
+			"argo-workflows",
+			"mlops",
+			"kubernetes"
+		],
+		"team_permissions": {
+			"admin": "admin",
+			"ai": "maintain",
+			"platform": "pull"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Python",
+		"license_template": "apache-2.0"
+	},
+	"ai-generative-qwen": {
+		"description": "Generative AI workflows with Qwen language models demonstrating LLM fine-tuning and specialized serving",
+		"visibility": "public",
+		"topics": [
+			"generative-ai",
+			"qwen",
+			"llm",
+			"fine-tuning",
+			"mlflow",
+			"kserve",
+			"argo-workflows",
+			"mlops",
+			"kubernetes"
+		],
+		"team_permissions": {
+			"admin": "admin",
+			"ai": "maintain",
+			"platform": "pull"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Python",
+		"license_template": "apache-2.0"
+	}
 }

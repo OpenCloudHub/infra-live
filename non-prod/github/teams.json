@@ -1,42 +1,42 @@
 {
-  "admin": {
-    "description": "Organization administrators - full access to all repositories and settings",
-    "privacy": "closed",
-    "members": [
-      {
-        "username": "reinhud",
-        "role": "maintainer"
-      }
-    ]
-  },
-  "platform": {
-    "description": "Platform engineering and infrastructure team - GitOps, Kubernetes, MLOps platform",
-    "privacy": "closed",
-    "members": [
-      {
-        "username": "reinhud",
-        "role": "maintainer"
-      }
-    ]
-  },
-  "ai": {
-    "description": "AI/ML engineering team - model development, training pipelines, research",
-    "privacy": "closed",
-    "members": [
-      {
-        "username": "reinhud",
-        "role": "maintainer"
-      }
-    ]
-  },
-  "app": {
-    "description": "Application development team - frontend, backend, demo applications",
-    "privacy": "closed",
-    "members": [
-      {
-        "username": "reinhud",
-        "role": "maintainer"
-      }
-    ]
-  }
+	"admin": {
+		"description": "Organization administrators - full access to all repositories and settings",
+		"privacy": "closed",
+		"members": [
+			{
+				"username": "reinhud",
+				"role": "maintainer"
+			}
+		]
+	},
+	"platform": {
+		"description": "Platform engineering and infrastructure team - GitOps, Kubernetes, MLOps platform",
+		"privacy": "closed",
+		"members": [
+			{
+				"username": "reinhud",
+				"role": "maintainer"
+			}
+		]
+	},
+	"ai": {
+		"description": "AI/ML engineering team - model development, training pipelines, research",
+		"privacy": "closed",
+		"members": [
+			{
+				"username": "reinhud",
+				"role": "maintainer"
+			}
+		]
+	},
+	"app": {
+		"description": "Application development team - frontend, backend, demo applications",
+		"privacy": "closed",
+		"members": [
+			{
+				"username": "reinhud",
+				"role": "maintainer"
+			}
+		]
+	}
 }

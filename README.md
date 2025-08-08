@@ -63,12 +63,14 @@
 This repository contains the **live infrastructure configurations** for the OpenCloudHub MLOps platform. It uses [Terragrunt](https://terragrunt.gruntwork.io/) to manage infrastructure as code across multiple cloud providers and environments, following DRY principles and best practices.
 
 **Purpose:**
+
 - **Environment Management**: Separate configurations for non-prod and production environments
 - **Multi-Cloud Support**: Consistent patterns across AWS, DigitalOcean, and other providers
 - **GitOps Workflow**: Infrastructure changes managed through pull requests and automated CI/CD
 - **Modular Design**: References reusable modules from [`infra-modules`](https://github.com/opencloudhub/infra-modules)
 
 **Key Features:**
+
 - 🔄 **DRY Configuration**: Shared settings via `root.hcl` and `_ENVCOMMON`
 - 🌐 **Multi-Cloud**: AWS, DigitalOcean, and local development support
 - 🔒 **GitOps Security**: All changes tracked, reviewed, and automated
@@ -99,9 +101,9 @@ infra-live/
 ### Configuration Hierarchy
 
 1. **`root.hcl`** - Global settings (remote state, provider versions)
-2. **`_ENVCOMMON/`** - Shared environment configurations
-3. **`{env}/{provider}/`** - Environment and provider-specific settings
-4. **`terragrunt.hcl`** - Module-specific configuration
+1. **`_ENVCOMMON/`** - Shared environment configurations
+1. **`{env}/{provider}/`** - Environment and provider-specific settings
+1. **`terragrunt.hcl`** - Module-specific configuration
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,6 +114,7 @@ infra-live/
 ### Current Infrastructure
 
 #### GitHub Organization (`non-prod/github/`)
+
 - **Organization Management**: Settings, security policies, member management
 - **Team Structure**: Admin, Platform, AI, and App teams with role-based access
 - **Repository Management**: Automated repository creation with security rulesets
@@ -121,12 +124,14 @@ infra-live/
 #### Planned Infrastructure
 
 **AWS (`non-prod/aws/`, `prod/aws/`)**
+
 - EKS clusters for Kubernetes workloads
 - S3 buckets for data storage and model artifacts
 - RDS instances for application databases
 - CloudWatch for monitoring and logging
 
 **DigitalOcean (`non-prod/digitalocean/`, `prod/digitalocean/`)**
+
 - Kubernetes clusters (DOKS)
 - Spaces for object storage
 - Databases for application data
@@ -170,12 +175,14 @@ export DIGITALOCEAN_TOKEN="dop_v1_xxxxxxxxxxxx"
 ### Initial Setup
 
 1. **Clone the repository:**
+
 ```bash
 git clone https://github.com/opencloudhub/infra-live.git
 cd infra-live
 ```
 
 2. **Set up environment variables:**
+
 ```bash
 # Copy and customize environment template
 cp .env.example .env
@@ -183,14 +190,17 @@ source .env
 ```
 
 3. **Initialize a specific environment:**
+
 ```bash
 cd non-prod/github
 terragrunt init
 terragrunt plan
 ```
+
 If you feel very safe about your configuration, you could also run the whole infrastructure
 in one go from the root using:
-```bash
+
+````bash
 terragrunt run init --all --source-update
 terragrunt run fmt --all
 terragrunt run validate --all
@@ -216,22 +226,26 @@ terragrunt run apply --all
 #### 1. Create Feature Branch
 ```bash
 git checkout -b feature/add-new-repository
-```
+````
 
 #### 2. Make Changes
+
 Edit the relevant JSON configuration files:
+
 ```bash
 # Example: Adding a new repository
 vim non-prod/github/repositories.json
 ```
 
 #### 3. Test Locally
+
 ```bash
 cd non-prod/github
 terragrunt plan
 ```
 
 #### 4. Commit and Push
+
 ```bash
 git add .
 git commit -m "feat: add new repository for ML experiments"
@@ -239,11 +253,13 @@ git push origin feature/add-new-repository
 ```
 
 #### 5. Create Pull Request
+
 - GitHub Actions will automatically run CI (format, validate, plan)
 - Request review from team members
 - CI must pass before merging
 
 #### 6. Merge to Main
+
 - Once approved and CI passes, merge to main
 - CD pipeline automatically applies changes to infrastructure
 
@@ -277,6 +293,7 @@ The GitHub module uses JSON files for easy configuration management:
 If you have existing resources that weren't created by Terraform:
 
 #### Import GitHub Resources
+
 ```bash
 cd non-prod/github
 
@@ -291,6 +308,7 @@ terragrunt import 'github_membership.all["username"]' username
 ```
 
 #### Find Resource IDs
+
 ```bash
 # Get team IDs
 gh api orgs/opencloudhub/teams --jq '.[] | {name, id}'
@@ -305,18 +323,21 @@ gh api users/username --jq '.id'
 ### Adding New Environments
 
 1. **Create directory structure:**
+
 ```bash
 mkdir -p staging/aws
 mkdir -p staging/github
 ```
 
 2. **Copy base configuration:**
+
 ```bash
 cp non-prod/github/terragrunt.hcl staging/github/
 # Edit as needed for staging-specific settings
 ```
 
 3. **Update configurations:**
+
 ```bash
 # Modify JSON files for staging-specific settings
 vim staging/github/repositories.json
@@ -325,12 +346,14 @@ vim staging/github/repositories.json
 ### Managing Secrets
 
 **Environment Variables** (Recommended):
+
 ```bash
 export GITHUB_TOKEN="your-token"
 export AWS_ACCESS_KEY_ID="your-key"
 ```
 
 **GitHub Actions Secrets**:
+
 - `GH_TOKEN` - GitHub Personal Access Token
 - `GITHUB_OWNER` - Organization name
 - `AWS_ACCESS_KEY_ID` - AWS credentials
@@ -347,19 +370,21 @@ export AWS_ACCESS_KEY_ID="your-key"
 **Trigger**: Pull requests to `main` branch
 
 **Steps**:
+
 1. **Format Check**: `terragrunt hcl format --check --all`
-2. **Validation**: `terragrunt validate --all`  
-3. **Planning**: `terragrunt plan --all` (shows proposed changes)
-4. **Comment on PR**: Plan output posted as PR comment
+1. **Validation**: `terragrunt validate --all`
+1. **Planning**: `terragrunt plan --all` (shows proposed changes)
+1. **Comment on PR**: Plan output posted as PR comment
 
 ### Continuous Deployment (Main Branch)
 
 **Trigger**: Pushes to `main` branch
 
 **Steps**:
+
 1. **Plan**: Review changes before applying
-2. **Apply**: `terragrunt apply --all --auto-approve`
-3. **Notification**: Results posted to monitoring channels
+1. **Apply**: `terragrunt apply --all --auto-approve`
+1. **Notification**: Results posted to monitoring channels
 
 ### Manual Deployment
 
@@ -380,6 +405,7 @@ terragrunt destroy
 ### Environment Protection
 
 Production environments use GitHub Environment protection:
+
 - **Required Reviewers**: Manual approval before deployment
 - **Wait Timers**: Configurable delays for staged deployments
 - **Branch Restrictions**: Only deploy from protected branches
@@ -393,7 +419,9 @@ Production environments use GitHub Environment protection:
 ### Common Issues
 
 #### State Drift
+
 **Problem**: Infrastructure differs from Terraform state
+
 ```bash
 # Check for drift
 terragrunt refresh
@@ -404,7 +432,9 @@ terragrunt import 'resource.name' resource-id
 ```
 
 #### Provider Version Conflicts
+
 **Problem**: Provider version mismatches
+
 ```bash
 # Update provider versions
 terragrunt init -upgrade
@@ -415,7 +445,9 @@ terragrunt init
 ```
 
 #### GitHub API Rate Limits
+
 **Problem**: Too many API calls
+
 ```bash
 # Check rate limit status
 gh api rate_limit
@@ -439,9 +471,9 @@ terragrunt hcl format --check
 ### Getting Help
 
 1. **Check logs**: GitHub Actions logs for CI/CD failures
-2. **Validate locally**: Run `terragrunt plan` to see proposed changes
-3. **Review documentation**: Module-specific docs in `infra-modules` repo
-4. **GitHub Discussions**: Community support and questions
+1. **Validate locally**: Run `terragrunt plan` to see proposed changes
+1. **Review documentation**: Module-specific docs in `infra-modules` repo
+1. **GitHub Discussions**: Community support and questions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -452,14 +484,15 @@ terragrunt hcl format --check
 ### Development Guidelines
 
 1. **Follow naming conventions**: Use descriptive, consistent names
-2. **Update documentation**: Keep README and comments current
-3. **Test thoroughly**: Validate changes in non-prod first
-4. **Use feature branches**: No direct commits to main
-5. **Write clear commit messages**: Follow conventional commits
+1. **Update documentation**: Keep README and comments current
+1. **Test thoroughly**: Validate changes in non-prod first
+1. **Use feature branches**: No direct commits to main
+1. **Write clear commit messages**: Follow conventional commits
 
 ### Code Standards
 
 **Terragrunt Configuration**:
+
 ```hcl
 # Use consistent formatting
 terragrunt hcl format
@@ -472,6 +505,7 @@ inputs = {
 ```
 
 **JSON Configuration**:
+
 ```json
 {
   "repository-name": {
@@ -487,15 +521,15 @@ inputs = {
 ### Pull Request Process
 
 1. **Create feature branch** with descriptive name
-2. **Make changes** and test locally  
-3. **Update documentation** as needed
-4. **Submit PR** with clear description
-5. **Address feedback** from reviewers
-6. **Merge after approval** and CI success
+1. **Make changes** and test locally
+1. **Update documentation** as needed
+1. **Submit PR** with clear description
+1. **Address feedback** from reviewers
+1. **Merge after approval** and CI success
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
+______________________________________________________________________
 
 <div align="center">
   <h3>🌟 OpenCloudHub MLOps Platform</h3>

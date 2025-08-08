@@ -1,14 +1,14 @@
 {
-  "required_approving_review_count": 0,
-  "dismiss_stale_reviews": true,
-  "require_code_owner_review": false,
-  "require_last_push_approval": false,
-  "required_conversation_resolution": true,
-  "require_signed_commits": false,
-  "require_linear_history": true,
-  "block_force_pushes": true,
-  "block_deletions": true,
-  "required_status_checks": [],
-  "commit_message_pattern": null,
-  "branch_name_pattern": null
+	"required_approving_review_count": 0,
+	"dismiss_stale_reviews": true,
+	"require_code_owner_review": false,
+	"require_last_push_approval": false,
+	"required_conversation_resolution": true,
+	"require_signed_commits": false,
+	"require_linear_history": true,
+	"block_force_pushes": true,
+	"block_deletions": true,
+	"required_status_checks": [],
+	"commit_message_pattern": null,
+	"branch_name_pattern": null
 }

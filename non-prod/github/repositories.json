@@ -109,6 +109,32 @@
 		"gitignore_template": "Terraform",
 		"license_template": "apache-2.0"
 	},
+	"gh-actions-local-runner": {
+		"description": "Self-hosted GitHub Actions runner for local development and CI/CD workflows connected to kind.",
+		"visibility": "public",
+		"topics": [
+			"github-actions",
+			"self-hosted-runner",
+			"ci-cd",
+			"local-development",
+			"devops"
+		],
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Terraform",
+		"license_template": "apache-2.0"
+	},
 	"ai-ml-sklearn": {
 		"description": "Traditional machine learning workflows with scikit-learn demonstrating basic MLOps patterns",
 		"visibility": "public",

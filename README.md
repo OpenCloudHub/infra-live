@@ -207,7 +207,7 @@ terragrunt run validate --all
 terragrunt hcl format --check --all
 terragrunt run plan --all
 
-# Import Modules repo or existing infra
+# Import Modules repo or existing infra when Guthub provider has issues
 cd non-prod/github
 terragrunt import 'github_repository.all["infra-modules"]' infra-modules
 

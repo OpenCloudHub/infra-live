@@ -109,6 +109,26 @@
 		"gitignore_template": "Terraform",
 		"license_template": "apache-2.0"
 	},
+	"mlops-tools": {
+		"description": "Tools and helper scripts for MLOps workflows using MLflow and Ray on Kubernetes",
+		"visibility": "public",
+		"topics": ["mlops", "mlflow", "ray", "kubernetes"],
+		"team_permissions": {
+			"admin": "admin",
+			"platform": "maintain"
+		},
+		"environments": {
+			"production": {
+				"wait_timer": 0,
+				"required_reviewers": {
+					"users": [94812726],
+					"teams": []
+				}
+			}
+		},
+		"gitignore_template": "Python",
+		"license_template": "apache-2.0"
+	},
 	"gh-actions-local-runner": {
 		"description": "Self-hosted GitHub Actions runner for local development and CI/CD workflows connected to kind.",
 		"visibility": "public",
